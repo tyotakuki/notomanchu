@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Noto Sans Mongolian';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/notosansmongolian/v13/VdGCAYADGIwE0EopZx8xQfHlgEAMsrTo9Jcq6sSsxxw.woff2) format('woff2');
+  unicode-range: U+1800-18AF, U+200C-200D, U+202F, U+2048-2049, U+2460-2473, U+25CC, U+3001-3002, U+300A-300F, U+FE3D-FE3E, U+FE41-FE44, U+11660-1166C, U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+div.manjutext {
+    height: 320px;
+    margin: 4px;
+    padding: 4px;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.manju {
+    height: 320px;
+    margin: 2px;
+    padding: 2px;
+    width: 100%;
+    overflow-x: scroll;
+
+    -webkit-font-feature-settings: "ccmp";
+    font-family: 'Noto Sans Mongolian';
+    font-size: 20px;
+    -webkit-text-orientation: sideways-right;
+    -moz-text-orientation: sideways;
+    -ms-text-orientation: sideways-right;
+    text-orientation: sideways;
+    -moz-writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+    -webkit-writing-mode : vertical-lr;
+    -o-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-rl;
+    text-justify: inter-ideograph;
+    text-align:left;
+}
+
+
+.manjutitle {
+    height: 320px;
+    margin: 4px;
+    padding: 4px;
+    overflow: auto;
+
+    -webkit-font-feature-settings: "ccmp";
+    font-family: 'Noto Sans Mongolian';
+    font-size: 60px;
+    -webkit-text-orientation: sideways-right;
+    -moz-text-orientation: sideways;
+    -ms-text-orientation: sideways-right;
+    text-orientation: sideways;
+    -moz-writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+    -webkit-writing-mode : vertical-lr;
+    -o-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-rl;
+    text-justify: inter-ideograph;
+    text-align:left;
+}
+
+.manjuh1 {
+    height:320px;
+    margin: 4px;
+    padding: 4px;
+    overflow: auto;
+
+    -webkit-font-feature-settings: "ccmp";
+    font-family: 'Noto Sans Mongolian';
+    font-size: 50px;
+
+    -moz-writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+    -webkit-writing-mode : vertical-lr;
+    -o-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-rl;
+    -webkit-text-orientation: sideways-right;
+    -moz-text-orientation: sideways;
+    -ms-text-orientation: sideways-right;
+    text-orientation: sideways;
+    text-justify: inter-ideograph;
+    text-align:left;
+}
+
+.manjuh2 {
+    height:320px;
+    margin: 4px;
+    padding: 4px;
+    overflow: auto;
+
+    -webkit-font-feature-settings: "ccmp";
+    font-family: 'Noto Sans Mongolian';
+    font-size: 40px;
+
+    -moz-writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+    -webkit-writing-mode : vertical-lr;
+    -o-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-rl;
+    -webkit-text-orientation: sideways-right;
+    -moz-text-orientation: sideways;
+    -ms-text-orientation: sideways-right;
+    text-orientation: sideways;
+    text-justify: inter-ideograph;
+    text-align:left;
+}
+
+p.hanwen {
+    height:320px;
+    margin: 4px;
+    padding: 4px;
+    display: inline-block;
+
+    -webkit-font-feature-settings: "ccmp";
+    font-size: 20px;
+
+    -moz-writing-mode: vertical-rl;
+    writing-mode: tb-lr;
+    -webkit-text-orientation: upright;
+    -moz-text-orientation: sideways;
+    -ms-text-orientation: sideways-right;
+    text-orientation: sideways;
+    -webkit-writing-mode : vertical-rl;
+    -webkit-text-orientation: upright;
+    -o-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    text-justify: inter-ideograph;
+    text-align:left;
+}
+
+span.hanwen {
+    margin: 4px;
+    padding: 4px;
+    overflow: scroll;
+    display: inline-block;
+
+    -webkit-font-feature-settings: "ccmp";
+    font-size: 20px;
+
+    -moz-writing-mode: vertical-rl;
+    writing-mode: tb-lr;
+    -webkit-orientation: upright;
+    -moz-text-orientation: sideways;
+    -ms-text-orientation: sideways-right;
+    text-orientation: sideways;
+    -webkit-writing-mode : vertical-rl;
+    -webkit-text-orientation: upright;
+    -o-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    text-justify: inter-ideograph;
+    text-align:left;
+}
+
+.manjubox {
+    height:100px;
+    min-width: 70px;
+    float:right;
+    clear:both;
+    font-family: 'Noto Sans Mongolian';
+    font-size : 22px;
+    margin-top:0px;
+    margin-left:15px;
+    margin-bottom:30px;
+    padding:3px;
+    background-color: #fff2e6;
+    -moz-writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+    -webkit-writing-mode: vertical-lr;
+    -o-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    -webkit-text-orientation: sideways-right;
+    -moz-text-orientation: sideways;
+    -ms-text-orientation: sideways-right;
+    text-orientation: sideways;
+}
