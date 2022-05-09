@@ -135,18 +135,29 @@ function fw(str) {
     return str
 }
 
+function processAinUin(str) {
+    str = str.replace(/yn$/g, "ᡳ᠌ᠨ᠋")
+    str = str.replace(/yn$/g, "ᡳ᠌ᠨ᠋")
+    str = str.replace(/yM$/g, "ᡳ᠌ᠩ")
+    str = str.replace(/yM$/g, "ᡳ᠌ᠩ")
+    return str
+}
 function allLetters(str) {
+    
+
     str = str.replace(/y$/, "ᡳ᠌")
     str = str.replace(/w$/, "ᠣ")
-    str = str.replace(/N$/, "ᠨ")
+    str = str.replace(/N$/, "ᠨ᠌")
     str = str.replace(/Y$/, "ᡳ")
     str = str.replace(/T$/, "ᡨ")
     str = str.replace(/t$/, "ᡨ᠌")
     str = str.replace(/ho$/, "ᡥᠤ")
     str = str.replace(/ko$/, "ᡴᠤ")
+    str = str.replace(/ke$/, "ᠭᠡ")
+    // str = str.replace(/^xu$/, "ᡧ")
     
     str = str.replace(/r$/, "ᡵ")
-    str = str.replace(/n$/, "ᠨ")
+    str = str.replace(/n$/, "ᠨ᠋")
     str = str.replace(/s$/, "ᠰ")
     str = str.replace(/x$/, "ᡧ")
     str = str.replace(/b$/, "ᠪ")
@@ -191,8 +202,9 @@ function allLetters(str) {
     return str
 }
 
+
 function getSyllables (word) {
-    return word.match(/(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)(?=([nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvV])))|(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)\*?$)/g)
+    return word.match(/(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)(?=([nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvV])))|(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)\*?$)|(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])(?=([nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIV])))|(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])\*?$)/g)
 }
 
 function processWords(shortstr){
@@ -202,6 +214,7 @@ function processWords(shortstr){
     else if(shortstr.match(/[a-zA-Zžšū'\*]+/)){
         shortstr = getSyllables(regularizeWords(shortstr))
         shortstr = shortstr.map((q) => processChinese(q))
+        shortstr = shortstr.map((q) => processAinUin(q))
         shortstr = shortstr.map((q) => akUju(q))
         shortstr = shortstr.map((q) => TaDaTeDe(q))
         shortstr = shortstr.map((q) => fw(q))
@@ -223,6 +236,8 @@ function writeManchu() {
     word_final = word_final.join('')
     word_final = word_final.replace(/,/g, "᠈")
     word_final = word_final.replace(/\./g, "᠉")
+    
     document.getElementById('manjuhergen').innerHTML = word_final;
+    // document.getElementById('manjuhergen').innerHTML += regularizeWords("saingge");
 }
 
