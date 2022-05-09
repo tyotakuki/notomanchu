@@ -142,8 +142,8 @@ function allLetters(str) {
     str = str.replace(/Y$/, "ᡳ")
     str = str.replace(/T$/, "ᡨ")
     str = str.replace(/t$/, "ᡨ᠌")
-    str = str.replace(/ho$/, "ᡥᠣ")
-    str = str.replace(/ko$/, "ᡴᠣ")
+    str = str.replace(/ho$/, "ᡥᠤ")
+    str = str.replace(/ko$/, "ᡴᠤ")
     
     str = str.replace(/r$/, "ᡵ")
     str = str.replace(/n$/, "ᠨ")
