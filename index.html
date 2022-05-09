@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>满文转写Noto Sans Mongolian转换工具</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/manchuvert.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="index.html">满文转写到<br/><br/>Noto Sans Mongolian<br/><br/>转换工具</a></h1>
+							<p>因为中国使用的满文太清、Sunggar字体和谷歌开发的Noto Sans Monglian字体标准不同，所以太清字体和Sunggar字体的输入序列无法在Noto Sans Monglian字体下顺利变形。本工具可以把Möllendorff转写序列，加入合适的控制字符，转换成Noto Sans Mongolian的正确输入序列。</p>
+
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div id="content">
+							<!-- Post -->
+								<article class="box post">
+									<header>
+										<h2>请在下面输入Möllendorff转写序列</h2>
+									</header>
+									<span class="image featured"><textarea id="mollendorff" placeholder="manju lading hergen be ubade dosimbuki" rows="10" style="width:100%;resize: none"></textarea></span>
+								</article>
+								<div style="text-align:center">
+									<a href="javascript:writeManchu();" class="form-button-submit button icon solid">转换</a>
+								</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="result">
+					<div class="container">
+						<div id="content">
+								<article class="box post">
+									<header>
+										<h2>Noto Sans Mongolian满文</h2>
+									</header>
+									<!-- <span class="image featured"><textarea name="message" placeholder="Message" rows="10" style="width:100%"></textarea></span> -->
+									<span class="image featured"><div class="manju" id="manjuhergen"></div></span>
+								</article>
+
+						</div>
+					</div>
+				</section>
+
+				<section id="instructions">
+					<div class="container">
+						<div id="content">
+								<article class="box post">
+									<header>
+										<h2>说明</h2>
+									</header>
+									<!-- <span class="image featured"><textarea name="message" placeholder="Message" rows="10" style="width:100%"></textarea></span> -->
+									<ul>
+										<li>请全部使用小写字母，目前仅支持穆式转写，支持用<code>v</code>和<code>x</code>来分别代替ū和š。</li>
+										<li>属格格助词‍ᡳ请使用<code>-i</code>输入。</li>
+										<li>特殊情况下（比如拼写汉语），半形的词尾形式o和u可在最后添加<code>*</code>。</li>
+										<li>特殊情况下（比如拼写汉语），加点的词尾形式n可在最后添加<code>*</code>。</li>
+										<li>汉语声母“日”可选用<code>R</code>或者<code>ž</code>输入。</li>
+										<li>汉语声母“知”和“蚩”分别用<code>c'</code>和<code>j'</code>输入。</li>
+										<li>汉语声母“歌科喝”分别用<code>k', g', h'</code>输入。</li>
+									</ul>
+								</article>
+
+						</div>
+					</div>
+				</section>
+
+				<section id="copyright">
+					<div class="container">
+						<div id="content">
+								<article class="box post">
+									<span class="image featured"><h3>© 2022 TYOTAKUKI Licensed under GNU GPLv3</h3></span>
+									
+								</article>
+
+						</div>
+					</div>
+				</section>
+
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/convert.js"></script>
+
+	</body>
+</html>
