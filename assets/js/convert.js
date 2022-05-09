@@ -241,3 +241,11 @@ function writeManchu() {
     // document.getElementById('manjuhergen').innerHTML += regularizeWords("saingge");
 }
 
+function writeGalik(str) {
+    document.getElementById('galik').innerHTML += str;
+}
+
+function backspace() {
+    var txt = document.getElementById('galik').textContent
+    document.getElementById('galik').innerHTML = txt.slice(0, txt.length - 1)
+}
