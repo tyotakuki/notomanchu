@@ -5,6 +5,7 @@ function parseWords(longstr){
 }
 
 function regularizeWords(shortstr){
+    shortstr = shortstr.replace("uu", "ö");
     shortstr = shortstr.replace("c'", "X");
     shortstr = shortstr.replace("j'", "J");
     shortstr = shortstr.replace("ioi", "ü");
@@ -172,6 +173,7 @@ function allLetters(str) {
     str = str.replace("o", "ᠣ");
     str = str.replace("u", "ᡠ");
     str = str.replace("v", "ᡡ");
+    str = str.replace("ö", "ᡠᡞ᠌");
 
     str = str.replace("@", "᠇");
     str = str.replace("n", "ᠨ");
@@ -202,7 +204,7 @@ function allLetters(str) {
 
 
 function getSyllables (word) {
-    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])\*?$)/g);
+    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvöV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])\*?$)/g);
 }
 
 function processWords(shortstr){
