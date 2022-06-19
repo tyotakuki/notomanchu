@@ -1,6 +1,6 @@
 
 function parseWords(longstr){
-    wordlist = longstr.split(/([^a-zA-Z0-9žšū'\*\-]+)/);
+    wordlist = longstr.split(/([^a-zA-Z@0-9žšū'\*\-]+)/);
     return wordlist;
 }
 
@@ -63,31 +63,31 @@ function processChinese(str) {
 }
 
 function akUju (str) {
-    if (str.match(/[nkghpbsxtTdDlmcjyrfwKGHZCR]?[aeiouv]k/)) {
+    if (str.match(/[@nkghpbsxtTdDlmcjyrfwKGHZCR]?[aeiouv]k/)) {
         if (str === "tek" || str === "Tek") {
             str = str.replace("k", "ᡴ᠋");
         }
         else if (str === "kuk" || str === "guk" || str === "huk" || str === "Kak" || str === "Gak"|| str ==="Hak") {
             str = str.replace("k", "ᡴ᠌");
         }
-        else if (str.match(/[nkghpbsxtTdDlmcjyrfwKGHZCR]?[aoui]k/)) {
+        else if (str.match(/[@nkghpbsxtTdDlmcjyrfwKGHZCR]?[aoui]k/)) {
             str = str.replace("k", "ᡴ᠋");
         }
-        else if (str.match(/[nkghpbsxtTdDlmcjyrfwKGHZCR]?[ev]k/)){
+        else if (str.match(/[@nkghpbsxtTdDlmcjyrfwKGHZCR]?[ev]k/)){
             str = str.replace("k", "ᡴ᠌");
         }
     }
-    else if (str.match(/[nkghpbsxtTdDlmcjyrfwKGHZCR]?[aeiouv]Q/)) {
+    else if (str.match(/[@nkghpbsxtTdDlmcjyrfwKGHZCR]?[aeiouv]Q/)) {
         if (str === "teQ" || str === "TeQ") {
             str = str.replace("Q", "ᡴ");
         }
         else if (str === "kuQ" || str === "guQ" || str === "huQ" || str === "KaQ" || str === "GaQ"|| str ==="HaQ") {
             str = str.replace("Q", "ᡴ᠋");
         }
-        else if (str.match(/[nkghpbsxtTdDlmcjyrfwKGHZCR]?[aoui]Q/)) {
+        else if (str.match(/[@nkghpbsxtTdDlmcjyrfwKGHZCR]?[aoui]Q/)) {
             str = str.replace("Q", "ᡴ");
         }
-        else if (str.match(/[nkghpbsxtTdDlmcjyrfwKGHZCR]?[ev]Q/)){
+        else if (str.match(/[@nkghpbsxtTdDlmcjyrfwKGHZCR]?[ev]Q/)){
             str = str.replace("Q", "ᡴ᠋");
         }
     }
@@ -143,8 +143,6 @@ function processAinUin(str) {
     return str;
 }
 function allLetters(str) {
-    
-
     str = str.replace(/y$/, "ᡳ᠌");
     str = str.replace(/w$/, "ᠣ");
     str = str.replace(/N$/, "ᠨ᠌");
@@ -175,7 +173,7 @@ function allLetters(str) {
     str = str.replace("u", "ᡠ");
     str = str.replace("v", "ᡡ");
 
-
+    str = str.replace("@", "᠇");
     str = str.replace("n", "ᠨ");
     str = str.replace("k", "ᡴ");
     str = str.replace("g", "ᡤ");
@@ -204,7 +202,7 @@ function allLetters(str) {
 
 
 function getSyllables (word) {
-    return word.match(/(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)(?=([nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvV])))|(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)\*?$)|(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])(?=([nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIV])))|(([nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])\*?$)/g);
+    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôIV][nkbsxtlmyrwMNYTQ]?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])\*?$)/g);
 }
 
 function processWords(shortstr){
