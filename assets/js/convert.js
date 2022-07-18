@@ -5,45 +5,45 @@ function parseWords(longstr){
 }
 
 function regularizeWords(shortstr){
-    shortstr = shortstr.replace("uu", "ö");
-    shortstr = shortstr.replace("c'", "X");
-    shortstr = shortstr.replace("j'", "J");
-    shortstr = shortstr.replace("ioi", "ü");
-    shortstr = shortstr.replace("iung", "û");
-    shortstr = shortstr.replace("iong", "ô");
-    shortstr = shortstr.replace("š", "x");
-    shortstr = shortstr.replace("ū", "v");
-    shortstr = shortstr.replace("k'", "K");
-    shortstr = shortstr.replace("g'", "G");
-    shortstr = shortstr.replace("h'", "H");
-    shortstr = shortstr.replace("ts", "C");
-    shortstr = shortstr.replace("dz", "Z");
-    shortstr = shortstr.replace("z", "Z");
-    shortstr = shortstr.replace("ž", "R");
-    shortstr = shortstr.replace("ng", "M");
-    shortstr = shortstr.replace("ai", "ay");
-    shortstr = shortstr.replace("ei", "ey");
-    shortstr = shortstr.replace("ii", "iy");
-    shortstr = shortstr.replace("oi", "oy");
-    shortstr = shortstr.replace("ui", "uy");
-    shortstr = shortstr.replace("vi", "vy");
-    shortstr = shortstr.replace("ao", "aw");
-    shortstr = shortstr.replace("eo", "ew");
-    shortstr = shortstr.replace("io", "iw");
-    shortstr = shortstr.replace("oo", "ow");
-    shortstr = shortstr.replace("uo", "uw");
-    shortstr = shortstr.replace("vo", "vw");
-    shortstr = shortstr.replace("y'", "V");
-    shortstr = shortstr.replace(/sy$/g, "sV");
-    shortstr = shortstr.replace(/Cy$/g, "CV");
-    shortstr = shortstr.replace(/Zy$/g, "Zi");
+    shortstr = shortstr.replaceAll("uu", "ö");
+    shortstr = shortstr.replaceAll("c'", "X");
+    shortstr = shortstr.replaceAll("j'", "J");
+    shortstr = shortstr.replaceAll("ioi", "ü");
+    shortstr = shortstr.replaceAll("iung", "û");
+    shortstr = shortstr.replaceAll("iong", "ô");
+    shortstr = shortstr.replaceAll("š", "x");
+    shortstr = shortstr.replaceAll("ū", "v");
+    shortstr = shortstr.replaceAll("k'", "K");
+    shortstr = shortstr.replaceAll("g'", "G");
+    shortstr = shortstr.replaceAll("h'", "H");
+    shortstr = shortstr.replaceAll("ts", "C");
+    shortstr = shortstr.replaceAll("dz", "Z");
+    shortstr = shortstr.replaceAll("z", "Z");
+    shortstr = shortstr.replaceAll("ž", "R");
+    shortstr = shortstr.replaceAll("ng", "M");
+    shortstr = shortstr.replaceAll("ai", "ay");
+    shortstr = shortstr.replaceAll("ei", "ey");
+    shortstr = shortstr.replaceAll("ii", "iy");
+    shortstr = shortstr.replaceAll("oi", "oy");
+    shortstr = shortstr.replaceAll("ui", "uy");
+    shortstr = shortstr.replaceAll("vi", "vy");
+    shortstr = shortstr.replaceAll("ao", "aw");
+    shortstr = shortstr.replaceAll("eo", "ew");
+    shortstr = shortstr.replaceAll("io", "iw");
+    shortstr = shortstr.replaceAll("oo", "ow");
+    shortstr = shortstr.replaceAll("uo", "uw");
+    shortstr = shortstr.replaceAll("vo", "vw");
+    shortstr = shortstr.replaceAll("y'", "V");
+    shortstr = shortstr.replaceAll(/sy$/g, "sV");
+    shortstr = shortstr.replaceAll(/Cy$/g, "CV");
+    shortstr = shortstr.replaceAll(/Zy$/g, "Zi");
     // shortstr = shortstr.replace(/o$/g, "O")
-    shortstr = shortstr.replace(/^t/g, "T");
-    shortstr = shortstr.replace(/^d/g, "D");
-    shortstr = shortstr.replace(/y$/g, "Y");
-    shortstr = shortstr.replace(/t$/g, "T");
-    shortstr = shortstr.replace(/n\*$/g, "N");
-    shortstr = shortstr.replace(/k$/g, "Q");
+    shortstr = shortstr.replaceAll(/^t/g, "T");
+    shortstr = shortstr.replaceAll(/^d/g, "D");
+    shortstr = shortstr.replaceAll(/y$/g, "Y");
+    shortstr = shortstr.replaceAll(/t$/g, "T");
+    shortstr = shortstr.replaceAll(/n\*$/g, "N");
+    shortstr = shortstr.replaceAll(/k$/g, "Q");
     return shortstr;
 }
 
@@ -212,7 +212,10 @@ function processWords(shortstr){
         shortstr = shortstr.replace("-i", "‍ᡳ");
     }
     else if(shortstr.match(/[a-zA-Zžšū'\*]+/)){
+//        alert(shortstr);
+//        alert(regularizeWords(shortstr));
         shortstr = getSyllables(regularizeWords(shortstr));
+//        alert(shortstr);
         shortstr = shortstr.map((q) => processChinese(q));
         shortstr = shortstr.map((q) => processAinUin(q));
         shortstr = shortstr.map((q) => akUju(q));
