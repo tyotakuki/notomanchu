@@ -144,8 +144,10 @@ function processAinUin(str) {
     return str;
 }
 function allLetters(str) {
+    str = str.replace(/y(?=([nkbsxtlmyrwMNYTQ]))/, "ᡳ᠌");
     str = str.replace(/y$/, "ᡳ᠌");
-    str = str.replace(/w(?=([lrMks]))/, "ᠣ");
+    str = str.replace(/w(?=([nkbsxtlmyrwMNYTQ]))/, "ᠣ");
+    
     str = str.replace(/w$/, "ᠣ");
     str = str.replace(/N$/, "ᠨ᠌");
     str = str.replace(/Y$/, "ᡳ");
@@ -205,7 +207,9 @@ function allLetters(str) {
 
 
 function getSyllables (word) {
-    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvöV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[au]y[nM])\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?iw[lrMks])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?iw[lrMks])\*?$)/g);
+    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvöV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ])\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ])\*?$)/g);
+// special cases: niolhvn fior, seoltei, sain, duin
+//aikte
 }
 
 function processWords(shortstr){
@@ -213,10 +217,10 @@ function processWords(shortstr){
         shortstr = shortstr.replace("-i", "‍ᡳ");
     }
     else if(shortstr.match(/[a-zA-Zžšū'\*]+/)){
-//        alert(shortstr);
-//        alert(regularizeWords(shortstr));
+        alert(shortstr);
+        alert(regularizeWords(shortstr));
         shortstr = getSyllables(regularizeWords(shortstr));
-//        alert(shortstr);
+        alert(shortstr);
         shortstr = shortstr.map((q) => processChinese(q));
         shortstr = shortstr.map((q) => processAinUin(q));
         shortstr = shortstr.map((q) => akUju(q));
