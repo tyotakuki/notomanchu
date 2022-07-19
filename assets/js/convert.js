@@ -217,10 +217,10 @@ function processWords(shortstr){
         shortstr = shortstr.replace("-i", "‍ᡳ");
     }
     else if(shortstr.match(/[a-zA-Zžšū'\*]+/)){
-        alert(shortstr);
-        alert(regularizeWords(shortstr));
+//        alert(shortstr);
+//        alert(regularizeWords(shortstr));
         shortstr = getSyllables(regularizeWords(shortstr));
-        alert(shortstr);
+//        alert(shortstr);
         shortstr = shortstr.map((q) => processChinese(q));
         shortstr = shortstr.map((q) => processAinUin(q));
         shortstr = shortstr.map((q) => akUju(q));
