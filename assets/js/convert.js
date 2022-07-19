@@ -207,7 +207,7 @@ function allLetters(str) {
 
 
 function getSyllables (word) {
-    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvöV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ])\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ])(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ])\*?$)/g);
+    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvöV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?s?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ]s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ]s?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ]s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ]s?)\*?$)/g);
 // special cases: niolhvn fior, seoltei, sain, duin
 //aikte
 }
