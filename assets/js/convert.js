@@ -44,6 +44,7 @@ function regularizeWords(shortstr){
     shortstr = shortstr.replaceAll(/t$/g, "T");
     shortstr = shortstr.replaceAll(/n\*$/g, "N");
     shortstr = shortstr.replaceAll(/k$/g, "Q");
+    shortstr = shortstr.replaceAll(/n$/g, "n_");
     return shortstr;
 }
 
@@ -159,6 +160,7 @@ function allLetters(str) {
     // str = str.replace(/^xu$/, "ᡧ")
     
     str = str.replace(/r$/, "ᡵ");
+    str = str.replace(/n_$/, "ᠨ");
     str = str.replace(/n$/, "ᠨ᠋");
     str = str.replace(/s$/, "ᠰ");
     str = str.replace(/x$/, "ᡧ");
@@ -207,7 +209,7 @@ function allLetters(str) {
 
 
 function getSyllables (word) {
-    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvöV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?s?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ]s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ]s?)\*?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ]s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ]s?)\*?$)/g);
+    return word.match(/(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvöV])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouvüûôöIV][nkbsxtlmyrwMNYTQ]?s?)\*?_?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ]s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[aeiouv]y[nkbsxtlmyrwMNYTQ]s?)\*?_?$)|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ]s?)(?=([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ][aeiouvüûôIVö])))|(([@nkghpbsxtTdDlmcjyrfwKGHZCRXJ]?[oei]w[nkbsxtlmyrwMNYTQ]s?)\*?_?$)/g);
 // special cases: niolhvn fior, seoltei, sain, duin
 //aikte
 }
