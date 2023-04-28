@@ -60,6 +60,8 @@ function processChinese(str) {
     str = str.replace("Zi","ᡯᡳ᠌");
     str = str.replace("X", "ᡱ");
     str = str.replace("J", "ᡷ");
+    str = str.replace("Y", "ᡟ");
+    str = str.replace("V", "ᡟ");
     // str = str.replace("Zy","ᡯᡳ᠌")
     return str;
 }
